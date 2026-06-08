@@ -23,11 +23,10 @@ I wanted to keep track of the length of the song i was listening to, while i was
 ## Build
 
 1. Clone this repo
-2. Have [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-3. Open powershell and change the directory to the one you just cloned
-4. Run the following command: `dotnet publish -c Release -r win-x64 --self-contained false`
+2. Open powershell and change the directory to the one you just cloned
+3. Run the following command: `dotnet publish -c Release -r win-x64 --self-contained false`
 
-The exe will be located at:
+The exe should be located at:
 ```
 bin\Release\net8.0-windows10.0.19041.0\win-x64\publish\SpotifyTaskbarProgress.exe
 ```
