@@ -78,11 +78,13 @@ class Program
                 }
 
                 // ── Ler sessão SMTC ────────────────────────────────────────
-                var session = manager.GetCurrentSession();
+                // GetSessions() em vez de GetCurrentSession() para não perder
+                // o Spotify quando outro app (browser, etc.) toma o foco SMTC
+                var session = manager.GetSessions()
+                    .FirstOrDefault(s => s.SourceAppUserModelId.Contains(
+                        "Spotify", StringComparison.OrdinalIgnoreCase));
 
-                if (session is null ||
-                    !session.SourceAppUserModelId.Contains(
-                        "Spotify", StringComparison.OrdinalIgnoreCase))
+                if (session is null)
                 {
                     SetState(taskbar, hwnd, TBPFLAG.TBPF_NOPROGRESS,
                         ref lastFlag);
