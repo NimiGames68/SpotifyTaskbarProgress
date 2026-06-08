@@ -7,7 +7,8 @@ Uses Windows SMTC (System Media Transport Controls) to read the music position a
 ---
 ## Why did i do this?
 
-I wanted to keep track of the length of the song i was listening to, while i was working on something, and gave me the idea
+I wanted to keep track of the length of the song i was listening to, while i was working on something, and it gave me this idea
+(also because aimp had it)
 
 ---
 
