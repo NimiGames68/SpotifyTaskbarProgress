@@ -107,7 +107,7 @@ class Program
 
                 if (status == GlobalSystemMediaTransportControlsSessionPlaybackStatus.Playing)
                 {
-                    // Extrapolate real position
+                    // Get position
                     var extra = DateTime.UtcNow - timeline.LastUpdatedTime.UtcDateTime;
                     var realPos = position + extra;
                     if (realPos > duration) realPos = duration;
@@ -152,7 +152,7 @@ class Program
 
     static IntPtr GetSpotifyHwnd()
     {
-        // Spotify runs several processes. The one with MainWindowHandle is the main one
+        // Find MainWindowHandle beteween spotify's processes
         foreach (var p in Process.GetProcessesByName("Spotify"))
         {
             try
