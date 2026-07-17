@@ -16,6 +16,18 @@ I wanted to keep track of the length of the song i was listening to, while i was
 - Spotify desktop app
 (nothing more i think..)
 
+## Install
+
+A already compiled build is in the releases tab.
+
+The exe for the program is in `\bin\Release\net8.0-windows10.0.19041.0\win-x64\publish`
+
+## Screenshots
+
+|Windows 10|Windows 11|
+|-|-|
+| <img src="https://raw.githubusercontent.com/NimiGames68/SpotifyTaskbarProgress/refs/heads/main/assets/taskbar-windows10.png" width="225"> | <img src="https://raw.githubusercontent.com/NimiGames68/SpotifyTaskbarProgress/refs/heads/main/assets/taskbar-windows11.png" width="300"> |
+
 ## Build
 
 1. Clone this repo
@@ -29,13 +41,9 @@ bin\Release\net8.0-windows10.0.19041.0\win-x64\publish\SpotifyTaskbarProgress.ex
 
 ## Autostart with Windows
 
-1. Open Explorer and go to `shell:startup` (paste in the win+r dialog box)
+1. Go to `shell:startup` (paste in the win+r dialog box)
 2. Create a shortcut to `SpotifyTaskbarProgress.exe` inside that folder
 
 ## How it works
 
 Spotify reports the playback position to the Windows SMTC. The program reads that position every 500ms, calculates the real time elapsed since the last SMTC update, and uses `ITaskbarList3` to update the progress bar on the Spotify icon in the taskbar.
-
-## License
-
-MIT
